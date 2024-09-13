@@ -5,14 +5,27 @@ const asl_btn = document.querySelector(".fa-hands-asl-interpreting")
 const text_input = document.getElementById("english")
 const output = document.getElementById('output');
 
-let json_app_vocabulary = {};
+let json_app_vocabulary = {
+    "apple": "A fruit",
+    "banana": "A yellow fruit",
+    "orange": "A citrus fruit",
+    "grape": "A small round fruit",
+    "watermelon": "A large fruit",
+    "you": "data1",
+    "student": "data2"
+};
+
+/*
 // Fetch the JSON file with 300 key-value pairs
-fetch('vocabulary.json')
+let json_app_vocabulary = {};
+fetch('store/vocabulary.json')
     .then(response => response.json())
     .then(data => {
         json_app_vocabulary = data;
     })
     .catch(error => console.error('Error loading vocabulary data:', error));
+*/
+
 
 //Speech object
 window.SpeechRecognition =
@@ -67,3 +80,4 @@ function updateOutput() {
 }
 // Event listener for input change
 english.addEventListener('change', updateOutput);
+
