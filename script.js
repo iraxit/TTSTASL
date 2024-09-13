@@ -48,7 +48,7 @@ recognition.addEventListener("result", (e) => {
         .map((result) => result.transcript)
         .join("");
     if (e.results[0].isFinal) {
-        text_input.value = input_text.toLocaleLowerCase;
+        text_input.value = input_text.toLowerCase;
         //updateOutput();
     }
 });
