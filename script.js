@@ -91,7 +91,7 @@ asl_btn.addEventListener('click', async function () {
     asl_btn.classList.add('hidden');
     try {
         // Send the sentence to the Node.js server
-        const response = await fetch('https://localhost:8000/translate', {
+        const response = await fetch('https://ttstaslnode.onrender.com/translate', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
