@@ -70,7 +70,8 @@ function updateOutput() {
     // Process each word
     words.forEach(word => {
         const span = document.createElement('span');
-        if (json_app_vocabulary.includes(word.toLowerCase())) {
+        if (json_app_vocabulary.hasOwnProperty(word)) {
+            //if (json_app_vocabulary.includes(word.toLowerCase())) {
             // Highlight the word if it's in the list
             span.classList.add('highlight');
         }
