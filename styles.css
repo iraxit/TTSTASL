@@ -5,7 +5,7 @@
 }
 
 html {
-    font-family: "Montserrat";
+    font-family: "Arial, sans-serif";
     font-size: 20px;
 }
 
@@ -55,6 +55,7 @@ section p {
     margin-bottom: 10px;
     background-color: white;
     outline: none;
+    font-size: 20px;
 }
 
 .texts p.reply {
@@ -94,3 +95,81 @@ section p {
     background-color: white;
     outline: none;
 }
+
+/* ----- for Toggle Switch ------ START
+/* Container for label and switch */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.toggle_label {
+    font-size: 16px;
+    padding: 2px;
+    margin: 10px;
+}
+
+/* The switch - outer container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 10px;
+    /* Spacing between label and switch */
+}
+
+/* The hidden checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider - the actual switch */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+/* The circle inside the switch */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* When the checkbox is checked, move the slider */
+input:checked+.slider {
+    background-color: #f32121;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+/* Rounded slider */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* ----- for Toggle Switch ------ END
