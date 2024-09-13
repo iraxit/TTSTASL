@@ -5,19 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Language Translator </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <section>
-        <h1>Speech<br> Recognition</h1>
+        <h1>Translate to Sign Language</h1>
         <p>Available In Chrome😎 Only</p>
+
         <div class="container">
-            <div class="texts">
-            </div>
+            <input type="text" id="english" placeholder="Say or type in the sentence you want to convert to ASL?" />
+            <i id="mic_btn" class="icon fa fa-microphone"></i>
+            <i id="ip_btn" class="icon fa-solid fa-ellipsis hidden"></i>
+            <i id="asl_btn" class="icon fa-solid fa-hands-asl-interpreting hidden"></i>
+            <div id="output"></div>
         </div>
     </section>
-    <script src="script.js"></script>
 </body>
+<script type="module" src="script.js"></script>
 
 </html>
