@@ -49,7 +49,7 @@ recognition.addEventListener("result", (e) => {
         .join("");
     if (e.results[0].isFinal) {
         text_input.value = input_text;
-        //updateOutput();
+        //updateOutput(text_input.value);
     }
 });
 
@@ -62,8 +62,7 @@ recognition.addEventListener("end", () => {
 
 
 // Function to process the text and highlight specific words
-function updateOutput() {
-    const text = text_input.value;
+function updateOutput(text) {
     const words = text.split(' '); // Split the text into words
 
     // Clear previous output
@@ -91,7 +90,7 @@ asl_btn.addEventListener('click', async function () {
     asl_btn.classList.add('hidden');
     try {
         // Send the sentence to the Node.js server
-        const response = await fetch('https://ttstaslnode.onrender.com/translate', {
+        const response = await fetch('https://ttstaslnode.onrender.com/translatetoASLGloss', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -105,6 +104,7 @@ asl_btn.addEventListener('click', async function () {
         }
         // Get the ASL Gloss from the response
         const result = await response.json();
+        updateOutput(result);
         console.log(result);
         //#document.getElementById('output').textContent = `ASL Gloss: ${result.aslGloss}`;
 
