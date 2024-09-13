@@ -7,7 +7,7 @@ const output = document.getElementById('output');
 
 let json_app_vocabulary = {};
 // Fetch the JSON file with 300 key-value pairs
-fetch('store/vocabulary.json')
+fetch('vocabulary.json')
     .then(response => response.json())
     .then(data => {
         json_app_vocabulary = data;
